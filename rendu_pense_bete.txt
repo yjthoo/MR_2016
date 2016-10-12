@@ -1,0 +1,2 @@
+- asservissement PID sur les roues à régler et justifier
+- filtre passe bas position : fréquence de coupure à justifier
