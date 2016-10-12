@@ -67,16 +67,24 @@ void opponents_tower(CtrlStruct *cvs)
 
 	// ----- opponents position computation start ----- //
 
-	opp_pos->x[0] = 0.0;
+	/*opp_pos->x[0] = 0.0;
 	opp_pos->y[0] = 0.0;
 
 	opp_pos->x[1] = 0.0;
-	opp_pos->y[1] = 0.0;
+	opp_pos->y[1] = 0.0;*/
     
     for(i=0; i<nb_opp; i++)
     {
-        if (i==0) single_opp_tower(rise_1, fall_1, rob_pos->x, rob_pos->y, rob_pos->theta, opp_pos[i].x, opp_pos[i].y); //to detect first robot
-        if (i==1) single_opp_tower(rise_2, fall_2, rob_pos->x, rob_pos->y, rob_pos->theta, opp_pos[i].x, opp_pos[i].y); //to detect second robot
+		if (i == 0)
+		{
+			single_opp_tower(rise_1, fall_1, rob_pos->x, rob_pos->y, rob_pos->theta, opp_pos[i].x, opp_pos[i].y, delta_t); //to detect first robot
+		}
+
+		if (i == 1)
+		{
+			single_opp_tower(rise_2, fall_2, rob_pos->x, rob_pos->y, rob_pos->theta, opp_pos[i].x, opp_pos[i].y, delta_t); //to detect second robot
+
+		}
     } 
 
 	/*if(inputs->t < -14)
@@ -104,11 +112,8 @@ void opponents_tower(CtrlStruct *cvs)
  * \param[out] new_y_opp new known y opponent position
  * \return 1 if computation successful, 0 otherwise
  */
-int single_opp_tower(double last_rise, double last_fall, double rob_x, double rob_y, double rob_theta, double *new_x_opp, double *new_y_opp)
-{
-	*new_x_opp = 0.0;
-	*new_y_opp = 0.0;
-    
+int single_opp_tower(double last_rise, double last_fall, double rob_x, double rob_y, double rob_theta, double *new_x_opp, double *new_y_opp, double delta_t)
+{   
 	double delta_theta= 0.0;
 
 	if (last_fall - last_rise < 0)
@@ -120,14 +125,23 @@ int single_opp_tower(double last_rise, double last_fall, double rob_x, double ro
 		delta_theta = last_fall - last_rise;
 	}
     
-	 double distance_to_rob = fabs(0.04/tan(delta_theta/2));    // distance from the center of our beacon to the oppenent's beacon
+	double distance_to_rob = fabs(0.04/tan(delta_theta/2));    // distance from the center of our beacon to the oppenent's beacon
     double distance_to_rob_x = distance_to_rob * cos(last_fall-delta_theta/2+rob_theta);
     double distance_to_rob_y = distance_to_rob * sin(last_fall-delta_theta/2+rob_theta);
     
-    *new_x_opp = rob_x + distance_to_rob_x;
-    *new_y_opp = rob_y + distance_to_rob_y;
+   // *new_x_opp = rob_x + distance_to_rob_x;
+   // *new_y_opp = rob_y + distance_to_rob_y;
 
-	printf("opponents tower (abs pos) detected: %f %f\n", *new_x_opp, *new_y_opp);
+	//printf("old positions: %f %f\n", *new_x_opp, *new_y_opp);
+
+	printf("old: %f %f\n", rob_x + distance_to_rob_x, rob_y + distance_to_rob_y);
+
+	*new_x_opp = first_order_filter(*new_x_opp, rob_x + distance_to_rob_x, 0.3, delta_t);
+	*new_y_opp = first_order_filter(*new_y_opp, rob_y + distance_to_rob_y, 0.3, delta_t);
+
+	//printf("delta t: %f\n", delta_t); used in the filter
+
+	printf("filter: %f %f\n", *new_x_opp, *new_y_opp);
 
 	return 1;
 }
