@@ -1,8 +1,8 @@
-# Install script for directory: /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_struct
+# Install script for directory: /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_struct
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/quentinfrancois/Documents/MBProjects/m454_project/build/Debug")
+  set(CMAKE_INSTALL_PREFIX "/Users/quentinfrancois/Downloads/m454_project/build/Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

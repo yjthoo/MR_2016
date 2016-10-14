@@ -126,9 +126,9 @@ void controller_loop(CtrlStruct *cvs)
 			{
 				cvs->main_state = RUN_STATE;
 				cvs->strat->main_state = GAME_STATE_A;
-				printf("pos x is: %f\n", cvs->rob_pos->x);
-				printf("pos y is: %f\n", cvs->rob_pos->y);
-				printf("rob_theta: %f\n", cvs->rob_pos->theta);
+				//printf("pos x is: %f\n", cvs->rob_pos->x);
+				//printf("pos y is: %f\n", cvs->rob_pos->y);
+				//printf("rob_theta: %f\n", cvs->rob_pos->theta);
 			}
 			break;
 

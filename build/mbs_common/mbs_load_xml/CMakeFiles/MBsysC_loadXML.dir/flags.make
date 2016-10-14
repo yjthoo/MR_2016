@@ -6,5 +6,5 @@ C_FLAGS = -fPIC -O3
 
 C_DEFINES = -DDIRDYNARED -DJAVA -DPROJECT_USERFCT_STATIC_DEFINE -DREAL_TIME -DSDL -DUNIX -DXML
 
-C_INCLUDES = -I/usr/local/include/libxml2 -I/Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_load_xml/. -I/Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_load_xml/../mbs_utilities -I/Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_load_xml/../mbs_struct 
+C_INCLUDES = -I/usr/local/include/libxml2 -I/Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_load_xml/. -I/Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_load_xml/../mbs_utilities -I/Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_load_xml/../mbs_struct 
 

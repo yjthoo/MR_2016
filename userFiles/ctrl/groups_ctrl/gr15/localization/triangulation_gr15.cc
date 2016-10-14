@@ -17,31 +17,37 @@ NAMESPACE_INIT(ctrlGr15);
  *
  * This function can be adapted, depending on the map.
  */
-void fixed_beacon_positions(int team_id, double *x_beac_1, double *y_beac_1,
-	double *x_beac_2, double *y_beac_2, double *x_beac_3, double *y_beac_3)
+void fixed_beacon_positions(int team_id, double *x_beac_1, double *y_beac_1, double *theta_beac_1,
+	double *x_beac_2, double *y_beac_2, double *theta_beac_2, double *x_beac_3, double *y_beac_3, double *theta_beac_3)
 {
 	switch (team_id)
 	{
-		case TEAM_A:
+		case TEAM_A: //start at -180°
 			*x_beac_1 = 0.0;
-			*y_beac_1 = 0.0;
+			*y_beac_1 = -1.562;
+			*theta_beac_1 = -M_PI/2;
 
-			*x_beac_2 = 0.0;
-			*y_beac_2 = 0.0;
+			*x_beac_2 = 1.062;
+			*y_beac_2 = 1.562;
+			*theta_beac_2 = M_PI/4;
 
-			*x_beac_3 = 0.0;
-			*y_beac_3 = 0.0;
+			*x_beac_3 = -1.062;
+			*y_beac_3 = 1.562;
+			*theta_beac_3 = 3*M_PI/4;
 			break;
 
-		case TEAM_B:
-			*x_beac_1 = 0.0;
-			*y_beac_1 = 0.0;
+		case TEAM_B: //start at -180°
+			*x_beac_1 = -1.062;
+			*y_beac_1 = -1.562;
+			*theta_beac_1 = -3*M_PI/4;
 
-			*x_beac_2 = 0.0;
-			*y_beac_2 = 0.0;
+			*x_beac_2 = 1.062;
+			*y_beac_2 = -1.562;
+			*theta_beac_2 = -M_PI/4;
 
 			*x_beac_3 = 0.0;
-			*y_beac_3 = 0.0;
+			*y_beac_3 = 1.562;
+			*theta_beac_3 = M_PI/2;
 			break;
 	
 		default:
@@ -84,11 +90,19 @@ void triangulation(CtrlStruct *cvs)
 	int alpha_1_index, alpha_2_index, alpha_3_index;
 	int rise_index_1, rise_index_2, rise_index_3;
 	int fall_index_1, fall_index_2, fall_index_3;
+	double rise_1, rise_2, rise_3;
+	double fall_1, fall_2, fall_3;
 
 	double alpha_a, alpha_b, alpha_c;
 	double alpha_1, alpha_2, alpha_3;
 	double alpha_1_predicted, alpha_2_predicted, alpha_3_predicted;
 	double x_beac_1, y_beac_1, x_beac_2, y_beac_2, x_beac_3, y_beac_3;
+	double theta_beac_1, theta_beac_2, theta_beac_3;
+
+	double x_beac_1_p, y_beac_1_p, x_beac_3_p, y_beac_3_p;
+	double cot_12, cot_23, cot_31;
+	double x_beac_12_p, y_beac_12_p, x_beac_23_p, y_beac_23_p, x_beac_31_p, y_beac_31_p;
+	double k_31_p, D;
 
 	// variables initialization
 	pos_tri = cvs->triang_pos;
@@ -102,9 +116,10 @@ void triangulation(CtrlStruct *cvs)
 	}
 
 	// known positions of the beacons
-	fixed_beacon_positions(cvs->team_id, &x_beac_1, &y_beac_1, &x_beac_2, &y_beac_2, &x_beac_3, &y_beac_3);	
+	fixed_beacon_positions(cvs->team_id, &x_beac_1, &y_beac_1, &theta_beac_1, &x_beac_2, &y_beac_2, &theta_beac_2,
+		 &x_beac_3, &y_beac_3, &theta_beac_3);	
 
-	// indexes fot the angles detection
+	// indexes for the angles detection
 	rise_index_1 = inputs->rising_index_fixed;
 	rise_index_2 = (rise_index_1 - 1 < 0) ? NB_STORE_EDGE-1 : rise_index_1 - 1;
 	rise_index_3 = (rise_index_2 - 1 < 0) ? NB_STORE_EDGE-1 : rise_index_2 - 1;
@@ -113,15 +128,28 @@ void triangulation(CtrlStruct *cvs)
 	fall_index_2 = (fall_index_1 - 1 < 0) ? NB_STORE_EDGE-1 : fall_index_1 - 1;
 	fall_index_3 = (fall_index_2 - 1 < 0) ? NB_STORE_EDGE-1 : fall_index_2 - 1;
 
-	// beacons angles measured with the laser (to compute)
-	alpha_a = 0.0;
-	alpha_b = 0.0;
-	alpha_c = 0.0;
+	// beacons angles measured with the laser
+	/*alpha_a = (fall_index_1-rise_index_1 < 0) ? ((fall_index_1+rise_index_1<0) ? (fall_index_1+rise_index_1)/2+180 : (fall_index_1+rise_index_1)/2-180)
+												: (fall_index_1+rise_index_1)/2;
+	alpha_b = (fall_index_2-rise_index_2 < 0) ? ((fall_index_2+rise_index_2<0) ? (fall_index_2+rise_index_2)/2+180 : (fall_index_2+rise_index_2)/2-180)
+												: (fall_index_2+rise_index_2)/2;
+	alpha_c = (fall_index_3-rise_index_3 < 0) ? ((fall_index_3+rise_index_3<0) ? (fall_index_3+rise_index_3)/2+180 : (fall_index_3+rise_index_3)/2-180)
+												: (fall_index_3+rise_index_3)/2;*/
+	
+	alpha_a = (inputs->last_falling_fixed[fall_index_1]-inputs->last_rising_fixed[rise_index_1] < 0) ? ((inputs->last_falling_fixed[fall_index_1]+inputs->last_rising_fixed[rise_index_1]<0) ?
+		(inputs->last_falling_fixed[fall_index_1]+inputs->last_rising_fixed[rise_index_1])/2+M_PI : (inputs->last_falling_fixed[fall_index_1]+inputs->last_rising_fixed[rise_index_1])/2-M_PI)
+		: (inputs->last_falling_fixed[fall_index_1]+inputs->last_rising_fixed[rise_index_1])/2;
+	alpha_b = (inputs->last_falling_fixed[fall_index_2]-inputs->last_rising_fixed[rise_index_2] < 0) ? ((inputs->last_falling_fixed[fall_index_2]+inputs->last_rising_fixed[rise_index_2]<0) ?
+		(inputs->last_falling_fixed[fall_index_2]+inputs->last_rising_fixed[rise_index_2])/2+M_PI : (inputs->last_falling_fixed[fall_index_2]+inputs->last_rising_fixed[rise_index_2])/2-M_PI)
+		: (inputs->last_falling_fixed[fall_index_2]+inputs->last_rising_fixed[rise_index_2])/2;
+	alpha_c = (inputs->last_falling_fixed[fall_index_3]-inputs->last_rising_fixed[rise_index_3] < 0) ? ((inputs->last_falling_fixed[fall_index_3]+inputs->last_rising_fixed[rise_index_3]<0) ?
+		(inputs->last_falling_fixed[fall_index_3]+inputs->last_rising_fixed[rise_index_3])/2+M_PI : (inputs->last_falling_fixed[fall_index_3]+inputs->last_rising_fixed[rise_index_3])/2-M_PI)
+		: (inputs->last_falling_fixed[fall_index_3]+inputs->last_rising_fixed[rise_index_3])/2;
 
 	// beacons angles predicted thanks to odometry measurements (to compute)
-	alpha_1_predicted = 0.0;
-	alpha_2_predicted = 0.0;
-	alpha_3_predicted = 0.0;
+	alpha_1_predicted = limit_angle(theta_beac_1 - rob_pos->theta);
+	alpha_2_predicted = limit_angle(theta_beac_2 - rob_pos->theta);
+	alpha_3_predicted = limit_angle(theta_beac_3 - rob_pos->theta);
 
 	// indexes of each beacon
 	alpha_1_index = index_predicted(alpha_1_predicted, alpha_a, alpha_b, alpha_c);
@@ -172,13 +200,51 @@ void triangulation(CtrlStruct *cvs)
 	
 
 	// ----- triangulation computation start ----- //
+	// beacon angle start is -180° and end is 180°
+
+	//modified beacon angles
+	x_beac_1_p = x_beac_1 - x_beac_2;
+	y_beac_1_p = y_beac_1 - y_beac_2;
+	x_beac_3_p = x_beac_3 - x_beac_2;
+	y_beac_3_p = y_beac_3 - y_beac_2;
+
+	//cotans
+	cot_12 = cos(alpha_2_index-alpha_1_index)/sin(alpha_2_index-alpha_1_index);
+	cot_23 = cos(alpha_3_index-alpha_2_index)/sin(alpha_3_index-alpha_2_index);
+	cot_31 = (1-cot_12*cot_23)/(cot_12+cot_23);
+
+	//modified circle center coordinates
+	x_beac_12_p = x_beac_1_p + cot_12*y_beac_1;
+	y_beac_12_p = y_beac_1_p - cot_12*x_beac_1;
+	x_beac_23_p = x_beac_3_p - cot_23*y_beac_3_p;
+	y_beac_23_p = y_beac_3_p + cot_23*x_beac_3_p;
+	x_beac_31_p = (x_beac_3_p+x_beac_1_p)+cot_31*(y_beac_3_p-y_beac_1_p);
+	y_beac_31_p = (y_beac_3_p+y_beac_1_p)-cot_31*(x_beac_3_p-x_beac_1_p);
+
+	//compute k and D
+	k_31_p = x_beac_1_p*x_beac_3_p + y_beac_1_p*y_beac_3_p + 
+		cot_31*(x_beac_1_p*y_beac_3_p - x_beac_3_p*y_beac_1_p);
+	D = (x_beac_12_p - x_beac_23_p)*(y_beac_23_p - y_beac_31_p) -
+		(y_beac_12_p - y_beac_23_p)*(x_beac_23_p - x_beac_31_p);
+	if (D == 0)
+	{
+		printf("Error: D = 0 !\n");
+		exit(EXIT_FAILURE);
+	}
 
 	// robot position
-	pos_tri->x = 0.0;
-	pos_tri->y = 0.0;
+	pos_tri->x = x_beac_2 + (k_31_p*(y_beac_12_p - y_beac_23_p))/D;
+	pos_tri->y = y_beac_2 + (k_31_p*(x_beac_23_p - x_beac_12_p))/D;
 
-	// robot orientation
-	pos_tri->theta = 0.0;
+	// robot orientation (mean between the 3 angles measured)
+	pos_tri->theta = limit_angle(((theta_beac_1 - alpha_1_index)+(theta_beac_2 - alpha_2_index)+(theta_beac_3 - alpha_3_index))/3);
+
+	printf("index of rising : %i, %i, %i \n", rise_index_1, rise_index_2, rise_index_3);
+	printf("rising mesurés : 1 = %f, 2 = %f, 3 = %f\n", inputs->last_rising_fixed[rise_index_1], inputs->last_rising_fixed[rise_index_2], inputs->last_rising_fixed[rise_index_3]);
+	printf("index of falling : %i, %i, %i \n", fall_index_1, fall_index_2, fall_index_3);
+	printf("falling mesurés : 1 = %f, 2 = %f, 3 = %f\n", inputs->last_falling_fixed[fall_index_1], inputs->last_falling_fixed[fall_index_2], inputs->last_falling_fixed[fall_index_3]);
+	//printf("triangulation : x = %f, y = %f, theta = %f\n", pos_tri->x, pos_tri->y, pos_tri->theta);
+	//printf("odometry : x = %f, y = %f, theta = %f\n", rob_pos->x, rob_pos->y, rob_pos->theta);
 
 	// ----- triangulation computation end ----- //
 }

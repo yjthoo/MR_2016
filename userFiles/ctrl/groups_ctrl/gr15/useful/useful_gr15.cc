@@ -55,6 +55,15 @@ double limit_angle(double x)
 	return x;
 }
 
+double delimit_angle(double x)
+{
+	if (x <= 0) {
+		x += 2*M_PI;
+	}
+
+	return x;
+}
+
 /*! \brief first-order low-pass filter
  * 
  * \param[in] last_val last value
