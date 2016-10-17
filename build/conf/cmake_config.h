@@ -7,6 +7,6 @@
  *
  * A header file called 'cmake_config.h' is then automatically generated in the build directory
  */
-#define PROJECT_SOURCE_DIR "/Users/quentinfrancois/Downloads/m454_project/workR"
-#define PROJECT_BINARY_DIR "/Users/quentinfrancois/Downloads/m454_project/build"
+#define PROJECT_SOURCE_DIR "/Users/quentinfrancois/Documents/MBProjects/m454_project/workR"
+#define PROJECT_BINARY_DIR "/Users/quentinfrancois/Documents/MBProjects/m454_project/build"
 #define BUILD_PATH  "../build"

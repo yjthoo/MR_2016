@@ -17,6 +17,14 @@ void fixed_beacon_positions(int team_id, double *x_beac_1, double *y_beac_1,
 int index_predicted(double alpha_predicted, double alpha_a, double alpha_b, double alpha_c);
 void triangulation(CtrlStruct *cvs);
 
+/// Main controller structure
+typedef struct OrderRisingFalling
+{
+	double r1, r2, r3; //rising 1, 2 and 3
+	double f1, f2, f3; //falling 1, 2 and 3
+
+} OrderRisingFalling;
+
 NAMESPACE_CLOSE();
 
 #endif

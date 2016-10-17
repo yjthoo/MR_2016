@@ -4,18 +4,18 @@
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/java/java_functions.c.o
  /System/Library/Frameworks/JavaVM.framework/Headers/jni.h
  /System/Library/Frameworks/JavaVM.framework/Headers/jni_md.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./mbsysc_realtime_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/java_functions.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/java_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./mbsysc_realtime_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/java_functions.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/java_functions.h
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -63,22 +63,22 @@ mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/java/java_functions.c.o
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/java/visu_past.c.o
  /System/Library/Frameworks/JavaVM.framework/Headers/jni.h
  /System/Library/Frameworks/JavaVM.framework/Headers/jni_md.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./mbsysc_realtime_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/plot_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/java_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/visu_past.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/visu_past.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./mbsysc_realtime_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/plot_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/java_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/visu_past.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/java/visu_past.h
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -128,23 +128,23 @@ mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/java/visu_past.c.o
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/realtime/realtime.c.o
  /System/Library/Frameworks/JavaVM.framework/Headers/jni.h
  /System/Library/Frameworks/JavaVM.framework/Headers/jni_md.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbsysc_utilities_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/useful_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/visu_past.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/plot_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime_ext.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/time_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbsysc_utilities_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/useful_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/visu_past.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/plot_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime_ext.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/time_functions.h
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -195,21 +195,21 @@ mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/realtime/realtime.c.o
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/realtime/realtime_ext.c.o
  /System/Library/Frameworks/JavaVM.framework/Headers/jni.h
  /System/Library/Frameworks/JavaVM.framework/Headers/jni_md.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/events_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/plot_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime_ext.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime_ext.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/time_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/events_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/plot_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime_ext.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime_ext.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/time_functions.h
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -258,32 +258,32 @@ mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/realtime/realtime_ext.c.o
  /usr/local/include/SDL2/close_code.h
  mbs_common/mbs_realtime/mbsysc_realtime_export.h
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/realtime/realtime_functions.c.o
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime_functions.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/realtime_functions.c
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/realtime/time_functions.c.o
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/time_functions.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/time_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/time_functions.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/realtime/time_functions.h
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/sdl/auto_plot/auto_plot.c.o
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbsysc_utilities_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/useful_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/auto_plot.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/auto_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbsysc_utilities_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/useful_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/auto_plot.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/auto_plot.h
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/sdl/auto_plot/set_plot.c.o
  /System/Library/Frameworks/JavaVM.framework/Headers/jni.h
  /System/Library/Frameworks/JavaVM.framework/Headers/jni_md.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/plot_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/auto_plot.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/set_plot.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/set_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/plot_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/auto_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/set_plot.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/auto_plot/set_plot.h
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -334,28 +334,28 @@ mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/sdl/auto_plot/set_plot.c.
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/sdl/events_sdl.c.o
  /System/Library/Frameworks/JavaVM.framework/Headers/jni.h
  /System/Library/Frameworks/JavaVM.framework/Headers/jni_md.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_aux.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_dirdyn_struct.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_sensor.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_symbolic_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbs_buffer.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbsysc_utilities_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/visu_past.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/color_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/events_sdl.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/events_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/plot_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_aux.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_dirdyn_struct.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_sensor.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_symbolic_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbs_buffer.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbsysc_utilities_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/visu_past.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/color_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/events_sdl.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/events_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/plot_sdl.h
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -406,25 +406,25 @@ mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/sdl/events_sdl.c.o
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/sdl/plot_sdl.c.o
  /System/Library/Frameworks/JavaVM.framework/Headers/jni.h
  /System/Library/Frameworks/JavaVM.framework/Headers/jni_md.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbsysc_utilities_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/useful_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/time_functions.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/set_plot.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/color_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/events_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/plot_sdl.c
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/plot_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/mbsysc_utilities_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_utilities/useful_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./java/java_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/time_functions.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/auto_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/auto_plot/set_plot.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/color_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/events_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/plot_sdl.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/sdl/plot_sdl.h
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -474,17 +474,17 @@ mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/sdl/plot_sdl.c.o
  mbs_common/mbs_realtime/conf/cmake_sdl_config.h
  mbs_common/mbs_realtime/mbsysc_realtime_export.h
 mbs_common/mbs_realtime/CMakeFiles/MBsysC_realtime.dir/void/void_set_plot.c.o
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./mbsysc_realtime_export.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
- /Users/quentinfrancois/Downloads/m454_project/mbsysCopy/mbs_common/mbs_realtime/void/void_set_plot.c
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_data.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_project_fct_ptr.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/mbs_user_interface.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/../mbs_struct/project_userfct_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./mbsysc_realtime_export.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./realtime/realtime_ext.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./sdl/color_sdl.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/./user_realtime_visu.h
+ /Users/quentinfrancois/Documents/MBProjects/m454_project/mbsysCopy/mbs_common/mbs_realtime/void/void_set_plot.c
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h

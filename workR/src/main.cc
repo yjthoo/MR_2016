@@ -129,7 +129,7 @@ int main(int argc, char const *argv[])
 
 	// dirdyn options (see documentations for additional options)
 	mbs_dirdyn->options->dt0 = 1e-3;
-	mbs_dirdyn->options->tf  = 30.0;
+	mbs_dirdyn->options->tf  = 0.5;
 	mbs_dirdyn->options->save2file = 1;
 	mbs_dirdyn->options->respath  = PROJECT_SOURCE_DIR"/../resultsR";
 	mbs_dirdyn->options->animpath = PROJECT_SOURCE_DIR"/../animationR";

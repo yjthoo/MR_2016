@@ -75,6 +75,7 @@ int index_predicted(double alpha_predicted, double alpha_a, double alpha_b, doub
 	return (pred_err_a < pred_err_b) ? ((pred_err_a < pred_err_c) ? 0 : 2) : ((pred_err_b < pred_err_c) ? 1 : 2);
 }
 
+
 /*! \brief triangulation main algorithm
  * 
  * \param[in] cvs controller main structure
@@ -90,8 +91,7 @@ void triangulation(CtrlStruct *cvs)
 	int alpha_1_index, alpha_2_index, alpha_3_index;
 	int rise_index_1, rise_index_2, rise_index_3;
 	int fall_index_1, fall_index_2, fall_index_3;
-	double rise_1, rise_2, rise_3;
-	double fall_1, fall_2, fall_3;
+	double order[6];
 
 	double alpha_a, alpha_b, alpha_c;
 	double alpha_1, alpha_2, alpha_3;
@@ -128,23 +128,64 @@ void triangulation(CtrlStruct *cvs)
 	fall_index_2 = (fall_index_1 - 1 < 0) ? NB_STORE_EDGE-1 : fall_index_1 - 1;
 	fall_index_3 = (fall_index_2 - 1 < 0) ? NB_STORE_EDGE-1 : fall_index_2 - 1;
 
-	// beacons angles measured with the laser
-	/*alpha_a = (fall_index_1-rise_index_1 < 0) ? ((fall_index_1+rise_index_1<0) ? (fall_index_1+rise_index_1)/2+180 : (fall_index_1+rise_index_1)/2-180)
-												: (fall_index_1+rise_index_1)/2;
-	alpha_b = (fall_index_2-rise_index_2 < 0) ? ((fall_index_2+rise_index_2<0) ? (fall_index_2+rise_index_2)/2+180 : (fall_index_2+rise_index_2)/2-180)
-												: (fall_index_2+rise_index_2)/2;
-	alpha_c = (fall_index_3-rise_index_3 < 0) ? ((fall_index_3+rise_index_3<0) ? (fall_index_3+rise_index_3)/2+180 : (fall_index_3+rise_index_3)/2-180)
-												: (fall_index_3+rise_index_3)/2;*/
+	// ordering the index of rising and falling
+	order[0] = delimit_angle(inputs->last_rising_fixed[rise_index_1]);
+	order[2] = delimit_angle(inputs->last_rising_fixed[rise_index_2]);
+	order[4] = delimit_angle(inputs->last_rising_fixed[rise_index_3]);
+
+	if (fabs(delimit_angle(inputs->last_rising_fixed[rise_index_1])-delimit_angle(inputs->last_falling_fixed[fall_index_1]))<fabs(delimit_angle(inputs->last_rising_fixed[rise_index_1])-delimit_angle(inputs->last_falling_fixed[fall_index_2])) 
+		&& fabs(delimit_angle(inputs->last_rising_fixed[rise_index_1])-delimit_angle(inputs->last_falling_fixed[fall_index_1]))<fabs(delimit_angle(inputs->last_rising_fixed[rise_index_1])-delimit_angle(inputs->last_falling_fixed[fall_index_3])))
+	{
+		order[1] = delimit_angle(inputs->last_falling_fixed[fall_index_1]);
+
+		if (fabs(delimit_angle(inputs->last_rising_fixed[rise_index_2])-delimit_angle(inputs->last_falling_fixed[fall_index_2]))<fabs(delimit_angle(inputs->last_rising_fixed[rise_index_2])-delimit_angle(inputs->last_falling_fixed[fall_index_3])))
+		{
+			order[3] = delimit_angle(inputs->last_falling_fixed[fall_index_2]);
+			order[5] = delimit_angle(inputs->last_falling_fixed[fall_index_3]);
+		}
+		else 
+		{
+			order[3] = delimit_angle(inputs->last_falling_fixed[fall_index_3]);
+			order[5] = delimit_angle(inputs->last_falling_fixed[fall_index_2]);
+		}
+	}
+	if (fabs(delimit_angle(delimit_angle(inputs->last_rising_fixed[rise_index_1]))-delimit_angle(inputs->last_falling_fixed[fall_index_2]))<fabs(delimit_angle(delimit_angle(inputs->last_rising_fixed[rise_index_1]))-delimit_angle(inputs->last_falling_fixed[fall_index_1])) 
+		&& fabs(delimit_angle(delimit_angle(inputs->last_rising_fixed[rise_index_1]))-delimit_angle(inputs->last_falling_fixed[fall_index_2]))<fabs(delimit_angle(delimit_angle(inputs->last_rising_fixed[rise_index_1]))-delimit_angle(inputs->last_falling_fixed[fall_index_3])))
+	{
+		order[1] = delimit_angle(inputs->last_falling_fixed[fall_index_2]);
+
+		if (fabs(delimit_angle(inputs->last_rising_fixed[rise_index_2])-delimit_angle(inputs->last_falling_fixed[fall_index_1]))<fabs(delimit_angle(inputs->last_rising_fixed[rise_index_2])-delimit_angle(inputs->last_falling_fixed[fall_index_3])))
+		{
+			order[3] = delimit_angle(inputs->last_falling_fixed[fall_index_1]);
+			order[5] = delimit_angle(inputs->last_falling_fixed[fall_index_3]);
+		}
+		else 
+		{
+			order[3] = delimit_angle(inputs->last_falling_fixed[fall_index_3]);
+			order[5] = delimit_angle(inputs->last_falling_fixed[fall_index_1]);
+		}
+	}
+	if (fabs(delimit_angle(delimit_angle(inputs->last_rising_fixed[rise_index_1]))-delimit_angle(inputs->last_falling_fixed[fall_index_3]))<fabs(delimit_angle(delimit_angle(inputs->last_rising_fixed[rise_index_1]))-delimit_angle(inputs->last_falling_fixed[fall_index_1])) 
+		&& fabs(delimit_angle(delimit_angle(inputs->last_rising_fixed[rise_index_1]))-delimit_angle(inputs->last_falling_fixed[fall_index_3]))<fabs(delimit_angle(delimit_angle(inputs->last_rising_fixed[rise_index_1]))-delimit_angle(inputs->last_falling_fixed[fall_index_2])))
+	{
+		order[1] = delimit_angle(inputs->last_falling_fixed[fall_index_3]);
+
+		if (fabs(delimit_angle(inputs->last_rising_fixed[rise_index_2])-delimit_angle(inputs->last_falling_fixed[fall_index_1]))<fabs(delimit_angle(inputs->last_rising_fixed[rise_index_2])-delimit_angle(inputs->last_falling_fixed[fall_index_2])))
+		{
+			order[3] = delimit_angle(inputs->last_falling_fixed[fall_index_1]);
+			order[5] = delimit_angle(inputs->last_falling_fixed[fall_index_2]);
+		}
+		else 
+		{
+			order[3] = delimit_angle(inputs->last_falling_fixed[fall_index_2]);
+			order[5] = delimit_angle(inputs->last_falling_fixed[fall_index_1]);
+		}
+	}
 	
-	alpha_a = (inputs->last_falling_fixed[fall_index_1]-inputs->last_rising_fixed[rise_index_1] < 0) ? ((inputs->last_falling_fixed[fall_index_1]+inputs->last_rising_fixed[rise_index_1]<0) ?
-		(inputs->last_falling_fixed[fall_index_1]+inputs->last_rising_fixed[rise_index_1])/2+M_PI : (inputs->last_falling_fixed[fall_index_1]+inputs->last_rising_fixed[rise_index_1])/2-M_PI)
-		: (inputs->last_falling_fixed[fall_index_1]+inputs->last_rising_fixed[rise_index_1])/2;
-	alpha_b = (inputs->last_falling_fixed[fall_index_2]-inputs->last_rising_fixed[rise_index_2] < 0) ? ((inputs->last_falling_fixed[fall_index_2]+inputs->last_rising_fixed[rise_index_2]<0) ?
-		(inputs->last_falling_fixed[fall_index_2]+inputs->last_rising_fixed[rise_index_2])/2+M_PI : (inputs->last_falling_fixed[fall_index_2]+inputs->last_rising_fixed[rise_index_2])/2-M_PI)
-		: (inputs->last_falling_fixed[fall_index_2]+inputs->last_rising_fixed[rise_index_2])/2;
-	alpha_c = (inputs->last_falling_fixed[fall_index_3]-inputs->last_rising_fixed[rise_index_3] < 0) ? ((inputs->last_falling_fixed[fall_index_3]+inputs->last_rising_fixed[rise_index_3]<0) ?
-		(inputs->last_falling_fixed[fall_index_3]+inputs->last_rising_fixed[rise_index_3])/2+M_PI : (inputs->last_falling_fixed[fall_index_3]+inputs->last_rising_fixed[rise_index_3])/2-M_PI)
-		: (inputs->last_falling_fixed[fall_index_3]+inputs->last_rising_fixed[rise_index_3])/2;
+	// beacons angles measured with the laser
+	alpha_a = limit_angle((order[1]+order[0])/2);
+	alpha_b = limit_angle((order[3]+order[2])/2);
+	alpha_c = limit_angle((order[5]+order[4])/2);
 
 	// beacons angles predicted thanks to odometry measurements (to compute)
 	alpha_1_predicted = limit_angle(theta_beac_1 - rob_pos->theta);
@@ -214,8 +255,8 @@ void triangulation(CtrlStruct *cvs)
 	cot_31 = (1-cot_12*cot_23)/(cot_12+cot_23);
 
 	//modified circle center coordinates
-	x_beac_12_p = x_beac_1_p + cot_12*y_beac_1;
-	y_beac_12_p = y_beac_1_p - cot_12*x_beac_1;
+	x_beac_12_p = x_beac_1_p + cot_12*y_beac_1_p;
+	y_beac_12_p = y_beac_1_p - cot_12*x_beac_1_p;
 	x_beac_23_p = x_beac_3_p - cot_23*y_beac_3_p;
 	y_beac_23_p = y_beac_3_p + cot_23*x_beac_3_p;
 	x_beac_31_p = (x_beac_3_p+x_beac_1_p)+cot_31*(y_beac_3_p-y_beac_1_p);
@@ -239,12 +280,13 @@ void triangulation(CtrlStruct *cvs)
 	// robot orientation (mean between the 3 angles measured)
 	pos_tri->theta = limit_angle(((theta_beac_1 - alpha_1_index)+(theta_beac_2 - alpha_2_index)+(theta_beac_3 - alpha_3_index))/3);
 
-	printf("index of rising : %i, %i, %i \n", rise_index_1, rise_index_2, rise_index_3);
-	printf("rising mesurés : 1 = %f, 2 = %f, 3 = %f\n", inputs->last_rising_fixed[rise_index_1], inputs->last_rising_fixed[rise_index_2], inputs->last_rising_fixed[rise_index_3]);
-	printf("index of falling : %i, %i, %i \n", fall_index_1, fall_index_2, fall_index_3);
-	printf("falling mesurés : 1 = %f, 2 = %f, 3 = %f\n", inputs->last_falling_fixed[fall_index_1], inputs->last_falling_fixed[fall_index_2], inputs->last_falling_fixed[fall_index_3]);
-	//printf("triangulation : x = %f, y = %f, theta = %f\n", pos_tri->x, pos_tri->y, pos_tri->theta);
-	//printf("odometry : x = %f, y = %f, theta = %f\n", rob_pos->x, rob_pos->y, rob_pos->theta);
+	//printf("index of rising : %i, %i, %i \n", rise_index_1, rise_index_2, rise_index_3);
+	//printf("rising mesurés : 1 = %f, 2 = %f, 3 = %f\n", order[0], order[2], order[4]);
+	//printf("index of falling : %i, %i, %i \n", fall_index_1, fall_index_2, fall_index_3);
+	//printf("falling mesurés : 1 = %f, 2 = %f, 3 = %f\n", order[1], order[3], order[5]);
+	//printf("angles mesurés : a = %f, 2 = %f, 3 = %f\n", alpha_a, alpha_b, alpha_c);
+	printf("triangulation : x = %f, y = %f, theta = %f\n", pos_tri->x, pos_tri->y, pos_tri->theta);
+	printf("odometry : x = %f, y = %f, theta = %f\n", rob_pos->x, rob_pos->y, rob_pos->theta);
 
 	// ----- triangulation computation end ----- //
 }
